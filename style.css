@@ -1,0 +1,428 @@
+@import url(https://fonts.googleapis.com/earlyaccess/amiri.css);
+/* font-family: 'Amiri', serif; */
+
+@import url(https://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
+/*font-family: 'Droid Arabic Naskh', serif;*/
+
+@import url(https://fonts.googleapis.com/earlyaccess/lateef.css);
+/* font-family: 'Lateef', serif; */
+
+@import url(https://fonts.googleapis.com/earlyaccess/scheherazade.css);
+/*font-family: 'Scheherazade', serif;*/
+
+@import url(https://fonts.googleapis.com/earlyaccess/thabit.css);
+/* font-family: 'Thabit', serif; */
+
+
+:root {
+    --content-bg-color: #0378be;
+    --header-bg-color: #030171;
+    --page-bg-color: #0906b3;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+body {
+    font-family: 'Lateef', serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    direction: rtl;
+    flex-wrap: wrap;
+    padding-right: 1em;
+}
+
+body::after {
+    content: "";
+    background: url("imgs/body-bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: -1;
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    color: white;
+    width: 30%;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    top: 300px;
+}
+
+.header .page-name {
+    background-color: var(--page-bg-color);
+    border-radius: 20px;
+    width: 100%;
+    margin-top: -100px;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+.header .links {
+    background-color: var(--header-bg-color);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.3em;
+}
+
+.header .links .website-name {
+    font-size: 3em;
+    font-family: "Thabit";
+    margin: 10px;
+}
+
+.header .links .quick-links, .header .links .downloadable {
+    background-color: var(--content-bg-color);
+    width: 40%;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px;
+}
+
+.header .links .quick-links ul li a, .header .links .downloadable ul li a {
+    color: #fafffcd7;
+    font-size: 1.5em;
+    margin: 10px;
+}
+
+.header .links .quick-links li a:hover, .header .links .downloadable li a:hover {
+    color: #ff00c3;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.header .links .downloadable {
+    display: flex;
+    direction: rtl;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .links .downloadable ul {
+    display: flex;
+}
+
+.content {
+    background-color: var(--content-bg-color);
+    width: calc(100% - 40%);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    direction: rtl;
+    font-size: 1.4em;
+    color: white;
+}
+
+.content p {
+    font-size: 1.6em;
+    text-align: center;
+    background-color: antiquewhite;
+    padding: 20px 0;
+    color: black;
+    width: 100%;
+}
+
+.quranlist {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 3em;
+    padding: 10px;
+}
+
+
+
+.d1 {
+    text-align: center;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    font-size: 1.5em;
+    padding-bottom: 10px;
+    color: black;
+}
+
+.d1:not(.quranlist .d1) {
+    width: 90%;
+
+}
+
+.quranlist .d1 h3 {
+    margin: 10px;
+    color: #ba8737;
+}
+
+.button {
+    background-color: #3c002e5e;
+    color: white;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #3c00a85e;
+
+}
+
+
+.alahades p {
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.tasbeeh {
+    position: fixed;
+    left: -90px;
+    top: 20px;
+    width: 40%;
+    height: 20%;
+}
+
+.faq {
+    width: 100%;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.faq .q {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    text-decoration: underline;
+}
+
+.faq .q:hover {
+    color: #3c002e5e;
+}
+
+.faq .q .show {
+    background-color: blueviolet;
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.faq .a {
+    display: none;
+    line-height: 20px;
+    text-align: center;
+    margin: 10px;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+
+.faq .a.show {
+    display: block;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.faq .a.hide {
+    display: none;
+    animation: fadeOut 0.3s ease-in;
+}
+
+.faq .a p {
+    line-height: 50px;
+}
+
+.faq .a p span {
+    background-color: #FFBC11;
+}
+
+
+
+.prays {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.pray {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    background-color: aliceblue;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    color: black;
+}
+
+.pray .time {
+    font-size: 1.4em;
+    margin: 10px;
+}
+
+.next-prayer {
+    background-color: #ffe599;
+    color: #000;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+#countdown {
+    font-size: 1.3em;
+    background-color: #FFBC11;
+    padding: 0 10px;
+    border-radius: 10px;
+    color: black;
+}
+
+.pray-name-time {
+    font-size: 1.4em;
+}
+
+.hours, .mins, .secs {
+    font-size: 1.3em;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    body {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .header {
+        position: relative;
+        top: 40px;
+        width: 100%;
+    }
+
+    .header .page-name {
+        font-size: 1em;
+    }
+
+    .header .links {
+        font-size: 1em;
+    }
+
+    .header .links .website-name {
+        font-size: 2em;
+    }
+
+    .content {
+        width: 100%;
+        font-size: 1em;
+        margin-top: 50px;
+    }
+
+    .button {
+        font-size: 0.7em;
+    }
+
+    .header .links .downloadable {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .header .links {
+        font-size: 1.3em;
+    }
+
+    .button {
+        font-size: 0.6em;
+    }
+
+    .d1:not(.quranlist .d1) {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .button {
+        font-size: 1em;
+    }
+
+    .d1:not(.quranlist .d1) {
+        font-size: 0.8em;
+    }
+
+}
+
+@media screen and (max-width: 430px) {
+    .button {
+        font-size: 0.8em;
+    }
+
+    .d1:not(.quranlist .d1) {
+        font-size: 0.8em;
+    }
+
+    .header .links {
+        font-size: 1em;
+    }
+
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1500px) {
+    .button {
+        font-size: 1.4em;
+    }
+
+    .header .links {
+        font-size: 1.8em;
+    }
+
+    .d1:not(.quranlist .d1) {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width:370px) {
+    .button {
+        font-size: 0.6em;
+    }
+
+    .tasbeeh iframe {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .tasbeeh {
+        position: relative;
+        right: 0.1px;
+        width: 100%;
+    }
+}
